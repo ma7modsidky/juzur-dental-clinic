@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Clinic</title>
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+    <link href="./output.css" rel="stylesheet" />
+    <style>
+      .mobile-menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <!-- Header / Navbar -->
+    <header class="bg-outer-space shadow fixed w-full top-0 left-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <!-- <div class="text-2xl font-bold text-blue-600">Dental Clinic</div> -->
+        <!-- <div class="flex items-center"> -->
+        <img
+          src="../assets/juzur_logo.PNG"
+          alt="Dental Clinic Logo"
+          class="h-12 w-auto"
+        />
+        <!-- </div> -->
+        <nav class="hidden md:flex space-x-4">
+          <a href="#hero" class="text-oslo-gray hover:text-sundance">Home</a>
+          <a href="#services" class="text-oslo-gray hover:text-sundance"
+            >Services</a
+          >
+          <a href="#partners" class="text-oslo-gray hover:text-sundance"
+            >Partners</a
+          >
+          <a href="#contact" class="text-oslo-gray hover:text-sundance"
+            >Contact</a
+          >
+        </nav>
+        <button
+          id="menu-button"
+          class="md:hidden text-oslo-gray focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav
+        id="mobile-menu"
+        class="mobile-menu fixed top-0 left-0 w-64 h-full bg-outer-space shadow-lg md:hidden"
+      >
+        <div class="p-4">
+          <a href="#hero" class="block text-oslo-gray hover:text-sundance mb-4"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="block text-oslo-gray hover:text-sundance mb-4"
+            >Services</a
+          >
+          <a
+            href="#partners"
+            class="block text-oslo-gray hover:text-sundance mb-4"
+            >Partners</a
+          >
+          <a
+            href="#contact"
+            class="block text-oslo-gray hover:text-sundance mb-4"
+            >Contact</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-outer-space text-white py-20 mt-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl font-bold mb-4">
+          Welcome to <span class="text-sundance">JUZUR</span>
+        </h1>
+        <p class="mb-8">
+          At Juzur dental clinics, our highly specialised team is dedicated to
+          provide the highest quality of care with optimal results, we place
+          value on TOP for our patients total experience at Juzur from creating
+          a calm and friendly environment to making every effort to gain our
+          patients’ satisfaction and expectation.
+        </p>
+        <a
+          href="#contact"
+          class="bg-sundance text-white px-6 py-3 rounded-full font-semibold"
+          >Book an Appointment</a
+        >
+      </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section id="services" class="py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center justify-center m-2">
+              <img
+                src="../assets/icons/dental-veneer.webp"
+                alt="dental-veneer"
+                class="h-10 w-auto"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Veneers</h3>
+            <p class="text-gray-600">
+              veneer installation service to beautify worn and broken teeth and
+              get rid of gaps and pigmentation in a quick time, with
+              unparalleled quality, and in a 100% natural shape and color.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center justify-center m-2">
+              <img
+                src="../assets/icons/dental-crown.webp"
+                alt="dental-crown"
+                class="h-10 w-auto"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-4">
+              Dental crown installation
+            </h3>
+            <p class="text-gray-600">
+              Installing dental crowns is a safe solution to preserve molars
+              after nerve filling operations, to protect them from fractures or
+              corrosion. The crowns are manufactured in our own laboratories in
+              only 40 minutes.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center justify-center m-2">
+              <img
+                src="../assets/icons/dental-implant.webp"
+                alt="dental-implant"
+                class="h-10 w-auto"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Dental implants</h3>
+            <p class="text-gray-600">
+              Replacing missing teeth resulting from fractures and decay to
+              maintain gum health through dental implants using advanced
+              techniques and methods. The formula is manufactured in our
+              laboratories at breakneck speed.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center justify-center m-2">
+              <img
+                src="../assets/icons/tooth-whitening.webp"
+                alt="tooth-whitening"
+                class="h-10 w-auto"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Teeth whitening</h3>
+            <p class="text-gray-600">
+              By removing pigmentation, returning the teeth to their natural
+              color, and unifying the color for a new, attractive smile.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center justify-center m-2">
+              <img
+                src="../assets/icons/root-canal-2.png"
+                alt="root-canal"
+                class="h-10 w-auto"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Root canal therapy</h3>
+            <p class="text-gray-600">
+              a dental procedure to remove inflamed or infected pulp on the
+              inside of the tooth which is then carefully cleaned and
+              disinfected.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="flex items-center justify-center m-2">
+              <img
+                src="../assets/icons/tooth-extraction.png"
+                alt="tooth-extraction.png"
+                class="h-10 w-auto"
+              />
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Tooth extraction</h3>
+            <p class="text-gray-600">
+              a dental procedure during which your tooth is completely removed
+              from its socket. Sometimes, people refer to this as “pulling" a
+              tooth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Partners Section -->
+    <!-- <section id="partners" class="bg-gray-100 py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Partners</h2>
+        <div class="flex overflow-x-scroll space-x-4">
+          <div class="bg-white p-6 rounded-lg shadow min-w-max">
+            <h3 class="text-xl font-semibold mb-4">Partner 1</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow min-w-max">
+            <h3 class="text-xl font-semibold mb-4">Partner 2</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow min-w-max">
+            <h3 class="text-xl font-semibold mb-4">Partner 3</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow min-w-max">
+            <h3 class="text-xl font-semibold mb-4">Partner 3</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow min-w-max">
+            <h3 class="text-xl font-semibold mb-4">Partner 3</h3>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow min-w-max">
+            <h3 class="text-xl font-semibold mb-4">Partner 3</h3>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-20 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8">Our Team</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="../assets/team/dr_ahmed_sabry.jpg"
+              alt="Team Member 1"
+              class="w-full h-auto object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Dr. Ahmed Sabry</h3>
+            <p class="text-gray-600">Position</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="team-member2.jpg"
+              alt="Team Member 2"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Member 2</h3>
+            <p class="text-gray-600">Position</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="team-member3.jpg"
+              alt="Team Member 3"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Member 3</h3>
+            <p class="text-gray-600">Position</p>
+          </div>
+          <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <img
+              src="team-member4.jpg"
+              alt="Team Member 4"
+              class="w-full h-48 object-cover rounded-lg mb-4"
+            />
+            <h3 class="text-xl font-semibold mb-2">Member 4</h3>
+            <p class="text-gray-600">Position</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Form -->
+    <section id="contact" class="py-20">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+        <form class="max-w-lg mx-auto">
+          <div class="mb-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600"
+            />
+          </div>
+          <div class="mb-4">
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600"
+            />
+          </div>
+          <div class="mb-4">
+            <textarea
+              placeholder="Your Message"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-600"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-sundance text-white px-6 py-3 rounded-full font-semibold"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2024 Juzur Dental Clinic. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
