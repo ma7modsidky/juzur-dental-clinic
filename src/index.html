@@ -17,7 +17,10 @@
       .mobile-menu.active {
         transform: translateX(0);
       }
-      .menu-item:hover { transform: scale(1.05); transition: transform 0.2s; }
+      .menu-item:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s;
+      }
     </style>
   </head>
   <body class="bg-gray-100">
@@ -68,11 +71,31 @@
       </div>
       <nav
         id="mobile-menu"
-        class="mobile-menu fixed top-0 left-0 w-64 h-full bg-outer-space shadow-lg md:hidden text-center py-8"
+        class="mobile-menu fixed top-0 left-0 w-64 h-full bg-outer-space shadow-lg md:hidden text-center py-8 flex flex-col justify-between"
       >
         <div class="p-4">
-          <button id="close-button" class="text-gray-600 hover:text-sundance focus:outline-none absolute top-4 right-4"> <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </button>
-          <a href="#hero" class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl "
+          <button
+            id="close-button"
+            class="text-gray-600 hover:text-sundance focus:outline-none absolute top-4 right-4"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+          <a
+            href="#hero"
+            class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
             >Home</a
           >
           <a
@@ -90,39 +113,90 @@
             class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
             >Contact</a
           >
+        </div>
+        <div class="p-4">
           <!-- social icons -->
-          <div class="flex justify-around mt-8">
+          <div class="flex justify-around mb-4">
             <a href="facebook.com">
-              <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.31h3.591l-.468 3.622h-3.123V24h6.116c.732 0 1.325-.593 1.325-1.324V1.325C24 .593 23.407 0 22.675 0z"/>
-            </svg>            
+              <svg
+                class="w-8 h-8 text-oslo-gray hover:text-sundance"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.495v-9.294H9.691v-3.622h3.129V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.796.715-1.796 1.763v2.31h3.591l-.468 3.622h-3.123V24h6.116c.732 0 1.325-.593 1.325-1.324V1.325C24 .593 23.407 0 22.675 0z"
+                />
+              </svg>
             </a>
             <a href="">
-              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.373 0 0 5.373 0 12c0 2.11.55 4.1 1.52 5.88L0 24l6.12-1.52A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-2.11-.55-4.1-1.48-5.88zM12 22c-1.85 0-3.63-.5-5.18-1.44l-.37-.22-3.63.91.91-3.63-.22-.37C2.5 15.63 2 13.85 2 12 2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.07-7.75c-.28-.14-1.65-.82-1.91-.91-.26-.09-.45-.14-.64.14-.19.28-.73.91-.91 1.1-.18.19-.37.21-.64.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.14-.23-.56-.47-.49-.64-.5-.16-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-.1 2.43.91 1.41 2.01 2.47 2.28 2.64.28.16.55.24.76.36.19.09.36.07.5-.07.14-.14.57-.66.73-.88.19-.28.37-.23.55-.14.19.09 1.21.57 1.41.68.19.09.32.14.45.23.14.09.23.05.32-.05.09-.1.37-.43.45-.57.09-.14.05-.28-.05-.36z"/>
-            </svg>
+              <svg
+                class="w-8 h-8 text-oslo-gray hover:text-sundance"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.52 3.48A11.94 11.94 0 0012 0C5.373 0 0 5.373 0 12c0 2.11.55 4.1 1.52 5.88L0 24l6.12-1.52A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12 0-2.11-.55-4.1-1.48-5.88zM12 22c-1.85 0-3.63-.5-5.18-1.44l-.37-.22-3.63.91.91-3.63-.22-.37C2.5 15.63 2 13.85 2 12 2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10zm5.07-7.75c-.28-.14-1.65-.82-1.91-.91-.26-.09-.45-.14-.64.14-.19.28-.73.91-.91 1.1-.18.19-.37.21-.64.07-.28-.14-1.18-.44-2.25-1.41-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.14-.23-.56-.47-.49-.64-.5-.16-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-.1 2.43.91 1.41 2.01 2.47 2.28 2.64.28.16.55.24.76.36.19.09.36.07.5-.07.14-.14.57-.66.73-.88.19-.28.37-.23.55-.14.19.09 1.21.57 1.41.68.19.09.32.14.45.23.14.09.23.05.32-.05.09-.1.37-.43.45-.57.09-.14.05-.28-.05-.36z"
+                />
+              </svg>
             </a>
 
             <a href="instgram.com">
-              <svg class="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.756 0 8.332.012 7.052.07 5.77.128 4.514.4 3.514 1.4 2.514 2.4 2.242 3.656 2.184 4.938.126 6.218.114 6.642.114 12s.012 5.782.07 7.062c.058 1.282.33 2.538 1.33 3.538 1 .999 2.256 1.272 3.538 1.33 1.28.058 1.704.07 7.062.07s5.782-.012 7.062-.07c1.282-.058 2.538-.33 3.538-1.33 1-.999 1.272-2.256 1.33-3.538.058-1.28.07-1.704.07-7.062s-.012-5.782-.07-7.062c-.058-1.282-.33-2.538-1.33-3.538-1-.999-2.256-1.272-3.538-1.33-1.28-.058-1.704-.07-7.062-.07z"/>
-                <path d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"/>
-            </svg>
-            
+              <svg
+                class="w-8 h-8 text-oslo-gray hover:text-sundance"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308 1.266-.058 1.646-.07 4.85-.07zm0-2.163C8.756 0 8.332.012 7.052.07 5.77.128 4.514.4 3.514 1.4 2.514 2.4 2.242 3.656 2.184 4.938.126 6.218.114 6.642.114 12s.012 5.782.07 7.062c.058 1.282.33 2.538 1.33 3.538 1 .999 2.256 1.272 3.538 1.33 1.28.058 1.704.07 7.062.07s5.782-.012 7.062-.07c1.282-.058 2.538-.33 3.538-1.33 1-.999 1.272-2.256 1.33-3.538.058-1.28.07-1.704.07-7.062s-.012-5.782-.07-7.062c-.058-1.282-.33-2.538-1.33-3.538-1-.999-2.256-1.272-3.538-1.33-1.28-.058-1.704-.07-7.062-.07z"
+                />
+                <path
+                  d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998zm6.406-11.845a1.44 1.44 0 11-2.88 0 1.44 1.44 0 012.88 0z"
+                />
+              </svg>
             </a>
 
             <a href="">
-              <svg class="w-8 h-8 text-oslo-gray" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.21.49 2.53.76 3.88.76.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.29 22 2 13.71 2 3.5 2 2.95 2.45 2.5 3 2.5H6.5c.55 0 1 .45 1 1 0 1.35.27 2.67.76 3.88.15.36.07.78-.21 1.11l-2.2 2.2z"/>
-            </svg>
-            
+              <svg
+                class="w-8 h-8 text-oslo-gray hover:text-sundance"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.21.49 2.53.76 3.88.76.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.29 22 2 13.71 2 3.5 2 2.95 2.45 2.5 3 2.5H6.5c.55 0 1 .45 1 1 0 1.35.27 2.67.76 3.88.15.36.07.78-.21 1.11l-2.2 2.2z"
+                />
+              </svg>
             </a>
-            
-          
           </div>
 
           <!-- address -->
-           <p class="mt-8 text-oslo-gray">154 Al Nozha Street, Saint Fatima Square, Cairo, Egypt</p>
+          <div class="flex mb-4 justify-center">
+            <svg
+              class="w-8 h-8 text-oslo-gray"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 7a2 2 0 110 4 2 2 0 010-4z"
+              ></path>
+            </svg>
+            <p class="text-oslo-gray">
+              154 Al Nozha Street, Saint Fatima Square, Cairo, Egypt
+            </p>
+          </div>
         </div>
       </nav>
     </header>
@@ -325,13 +399,13 @@
     <!-- Contact Details Section -->
     <section id="contact-details" class="py-20 bg-gray-100">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8">Contact Details</h2>
+        <h2 class="text-3xl font-bold mb-8 text-outer-space">Contact Details</h2>
         <div class="grid grid-cols-1 gap-4">
           <!-- address -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col gap-2">
             <div class="flex items-center justify-center">
               <svg
-                class="w-8 h-8 text-sundance mr-4"
+                class="w-8 h-8 text-sundance mx-2"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -344,79 +418,13 @@
                   d="M16 8c0-2.21-1.79-4-4-4S8 5.79 8 8c0 1.1.45 2.1 1.17 2.83L12 16l2.83-5.17C15.55 10.1 16 9.1 16 8z"
                 ></path>
               </svg>
-              <h3 class="text-xl font-semibold mb-2">Address</h3>
+              <h3 class="text-xl font-semibold text-outer-space">Address</h3>
             </div>
             <div>
               <p class="text-gray-600">
                 154 Al Nozha Street, Saint Fatima Square, Cairo, Egypt
               </p>
             </div>
-          </div>
-          <!-- phone -->
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <div class="flex items-center justify-center">
-              <svg
-                class="w-8 h-8 text-sundance mr-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M3 10v6a1 1 0 001 1h3m10 0h3a1 1 0 001-1v-6m-4 10h-8a2 2 0 01-2-2v-5a2 2 0 012-2h8a2 2 0 012 2v5a2 2 0 01-2 2z"
-                ></path>
-              </svg>
-              <h3 class="text-xl font-semibold mb-2">Phone</h3>
-            </div>
-
-            <div>
-              <p class="text-gray-600">+201120062001</p>
-            </div>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <div class="flex items-center justify-center">
-              <svg
-                class="w-8 h-8 text-sundance mr-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 12H8m0 0H5.5a2.5 2.5 0 00-2.5 2.5v3a2.5 2.5 0 002.5 2.5H8m0 0h8m0 0h2.5a2.5 2.5 0 002.5-2.5v-3a2.5 2.5 0 00-2.5-2.5H16m0 0V9a4 4 0 00-8 0v3m8 0H8"
-                ></path>
-              </svg>
-              <h3 class="text-xl font-semibold mb-2">Email</h3>
-            </div>
-            <div>
-              <p class="text-gray-600">info@dentalclinic.com</p>
-            </div>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-            <div class="flex items-center justify-center">
-              <svg
-                class="w-8 h-8 text-sundance mr-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"
-                ></path>
-              </svg>
-              <h3 class="text-xl font-semibold mb-2">Location</h3>
-            </div>
-
             <div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.123456789012!2d31.123456789012!3d30.123456789012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1234567890123456!2sDental%20Clinic!5e0!3m2!1sen!2seg!4v1611234567890!5m2!1sen!2seg"
@@ -430,6 +438,48 @@
               ></iframe>
             </div>
           </div>
+          <!-- phone -->
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center justify-center">
+              <svg
+                class="w-8 h-8 text-sundance mx-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.21.49 2.53.76 3.88.76.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.29 22 2 13.71 2 3.5 2 2.95 2.45 2.5 3 2.5H6.5c.55 0 1 .45 1 1 0 1.35.27 2.67.76 3.88.15.36.07.78-.21 1.11l-2.2 2.2z"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-outer-space">Phone</h3>
+            </div>
+
+            <div>
+              <p class="text-gray-600">+201120062001</p>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="flex items-center justify-center">
+              <svg
+                class="h-8 w-8 text-sundance mx-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
+                  fill="#ccab60"
+                />
+              </svg>
+              <h3 class="text-xl font-semibold text-outer-space">Email</h3>
+            </div>
+            <div>
+              <p class="text-gray-600">info@dentalclinic.com</p>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -437,10 +487,11 @@
     <!-- Contact Us Form -->
     <section id="contact" class="py-20">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
+        <h2 class="text-3xl font-bold mb-8 text-outer-space">Book an appointment</h2>
         <form class="max-w-lg mx-auto">
           <div class="mb-4">
             <input
+              id="name"
               type="text"
               placeholder="Your Name"
               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-sundance"
@@ -448,6 +499,7 @@
           </div>
           <div class="mb-4">
             <input
+              id="phone"
               type="text"
               placeholder="Your phone number"
               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-sundance"
@@ -455,6 +507,7 @@
           </div>
           <div class="mb-4">
             <input
+              id="email"
               type="email"
               placeholder="Your Email"
               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-sundance"
@@ -462,13 +515,14 @@
           </div>
           <div class="mb-4">
             <textarea
-              placeholder="Your Message"
+              id="message"
+              placeholder="Your Message / complain"
               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-sundance"
             ></textarea>
           </div>
           <button
             type="submit"
-            class="bg-sundance text-white px-6 py-3 rounded-full font-semibold"
+            class="bg-outer-space hover:bg-sundance ease-in-out text-white px-6 py-3 rounded-full font-semibold"
           >
             Send Message
           </button>
@@ -491,7 +545,8 @@
       });
       closeButton.addEventListener("click", () => {
         mobileMenu.classList.toggle("active");
-      })
+      });
     </script>
+    <script src="../assets/js/form-submission.js"></script>
   </body>
 </html>
