@@ -9,6 +9,10 @@
       rel="stylesheet"
     /> -->
     <link href="./output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <style>
       .mobile-menu {
         transform: translateX(-100%);
@@ -20,6 +24,18 @@
       .menu-item:hover {
         transform: scale(1.05);
         transition: transform 0.2s;
+      }
+      .carousel {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+      }
+      .carousel-item {
+        min-width: 100%;
+        transition: transform 0.5s ease-in-out;
+      }
+      .swiper-slide {
+        width: 400px !important;
       }
     </style>
   </head>
@@ -38,16 +54,21 @@
         />
         <!-- </div> -->
         <nav class="hidden md:flex space-x-4">
-          <a href="#hero" class="text-oslo-gray hover:text-sundance">Home</a>
+          <a href="#hero" class="text-oslo-gray hover:text-sundance" data-translation="home">Home</a>
           <a href="#services" class="text-oslo-gray hover:text-sundance"
-            >Services</a
+          data-translation="services"  >Services</a
           >
-          <a href="#partners" class="text-oslo-gray hover:text-sundance"
-            >Partners</a
+          <a href="#team" class="text-oslo-gray hover:text-sundance"
+          data-translation="team"  >Our team</a
           >
           <a href="#contact" class="text-oslo-gray hover:text-sundance"
-            >Contact</a
+          data-translation="contact"  >Contact</a
           >
+
+          <select id="language-selector">
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+          </select>
         </nav>
         <button
           id="menu-button"
@@ -104,14 +125,14 @@
             >Services</a
           >
           <a
-            href="#partners"
+            href="#team"
             class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
-            >Partners</a
+            >Our team</a
           >
           <a
             href="#contact"
             class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
-            >Contact</a
+            >Contact us</a
           >
         </div>
         <div class="p-4">
@@ -205,9 +226,9 @@
     <section id="hero" class="bg-outer-space text-white py-20 mt-20">
       <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl font-bold mb-4">
-          Welcome to <span class="text-sundance">JUZUR</span>
+          <span data-translation="welcome to">Welcome to</span>&nbsp;<span class="text-sundance" data-translation="juzur">JUZUR</span>
         </h1>
-        <p class="mb-8">
+        <p class="mb-8" data-translation="intro">
           At Juzur dental clinics, our highly specialised team is dedicated to
           provide the highest quality of care with optimal results, we place
           value on TOP for our patients total experience at Juzur from creating
@@ -217,6 +238,7 @@
         <a
           href="#contact"
           class="bg-sundance text-white px-6 py-3 rounded-full font-semibold"
+          data-translation="book an appointment"
           >Book an Appointment</a
         >
       </div>
@@ -225,7 +247,7 @@
     <!-- Our Services Section -->
     <section id="services" class="py-20">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+        <h2 class="text-3xl font-bold mb-8" data-translation="services">Our Services</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white p-6 rounded-lg shadow">
             <div class="flex items-center justify-center m-2">
@@ -235,8 +257,8 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4">Veneers</h3>
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-4" data-translation="veneers">Veneers</h3>
+            <p class="text-gray-600" data-translation="veneers-intro">
               veneer installation service to beautify worn and broken teeth and
               get rid of gaps and pigmentation in a quick time, with
               unparalleled quality, and in a 100% natural shape and color.
@@ -250,10 +272,10 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4">
+            <h3 class="text-xl font-semibold mb-4" data-translation="dental-crown">
               Dental crown installation
             </h3>
-            <p class="text-gray-600">
+            <p class="text-gray-600" data-translation="dental-crown-intro">
               Installing dental crowns is a safe solution to preserve molars
               after nerve filling operations, to protect them from fractures or
               corrosion. The crowns are manufactured in our own laboratories in
@@ -268,8 +290,8 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4">Dental implants</h3>
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-4" data-translation="dental-implants">Dental implants</h3>
+            <p class="text-gray-600" data-translation="dental-implants-intro">
               Replacing missing teeth resulting from fractures and decay to
               maintain gum health through dental implants using advanced
               techniques and methods. The formula is manufactured in our
@@ -284,8 +306,8 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4">Teeth whitening</h3>
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-4" data-translation="teeth-whitening">Teeth whitening</h3>
+            <p class="text-gray-600" data-translation="teeth-whitening-intro">
               By removing pigmentation, returning the teeth to their natural
               color, and unifying the color for a new, attractive smile.
             </p>
@@ -298,8 +320,8 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4">Root canal therapy</h3>
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-4" data-translation="root-canal">Root canal therapy</h3>
+            <p class="text-gray-600" data-translation="root-canal-intro">
               a dental procedure to remove inflamed or infected pulp on the
               inside of the tooth which is then carefully cleaned and
               disinfected.
@@ -313,13 +335,40 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4">Tooth extraction</h3>
-            <p class="text-gray-600">
+            <h3 class="text-xl font-semibold mb-4" data-translation="tooth-extraction">Tooth extraction</h3>
+            <p class="text-gray-600" data-translation="tooth-extraction-intro">
               a dental procedure during which your tooth is completely removed
               from its socket. Sometimes, people refer to this as “pulling" a
               tooth.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our work -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Work</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="../assets/work/1.jpg" alt="Before" class="w-full  h-auto" />
+              
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/work/2.jpg" alt="Before" class="w-full h-auto" />
+            </div>
+            <div class="swiper-slide">
+              <img src="../assets/work/3.jpg" alt="Before" class="w-full h-auto" />
+            </div>
+            <!-- Add more slides as needed -->
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -367,7 +416,7 @@
           </div>
           <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
             <img
-              src="team-member2.jpg"
+              src="../assets/team/dr_ahmed_sabry.jpg"
               alt="Team Member 2"
               class="w-full h-48 object-cover rounded-lg mb-4"
             />
@@ -376,7 +425,7 @@
           </div>
           <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
             <img
-              src="team-member3.jpg"
+              src="../assets/team/dr_ahmed_sabry.jpg"
               alt="Team Member 3"
               class="w-full h-48 object-cover rounded-lg mb-4"
             />
@@ -385,7 +434,7 @@
           </div>
           <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
             <img
-              src="team-member4.jpg"
+              src="../assets/team/dr_ahmed_sabry.jpg"
               alt="Team Member 4"
               class="w-full h-48 object-cover rounded-lg mb-4"
             />
@@ -399,7 +448,9 @@
     <!-- Contact Details Section -->
     <section id="contact-details" class="py-20 bg-gray-100">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8 text-outer-space">Contact Details</h2>
+        <h2 class="text-3xl font-bold mb-8 text-outer-space">
+          Contact Details
+        </h2>
         <div class="grid grid-cols-1 gap-4">
           <!-- address -->
           <div class="bg-white p-6 rounded-lg shadow-lg flex flex-col gap-2">
@@ -479,7 +530,6 @@
               <p class="text-gray-600">info@dentalclinic.com</p>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
@@ -487,7 +537,9 @@
     <!-- Contact Us Form -->
     <section id="contact" class="py-20">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8 text-outer-space">Book an appointment</h2>
+        <h2 class="text-3xl font-bold mb-8 text-outer-space">
+          Book an appointment
+        </h2>
         <form class="max-w-lg mx-auto">
           <div class="mb-4">
             <input
@@ -513,7 +565,7 @@
               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-sundance"
             />
           </div>
-          <div class="mb-4">
+          <div class="mb-4 w-">
             <textarea
               id="message"
               placeholder="Your Message / complain"
@@ -531,7 +583,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
+    <footer class="bg-outer-space text-white py-6">
       <div class="container mx-auto px-4 text-center">
         <p>&copy; 2024 Juzur Dental Clinic. All rights reserved.</p>
       </div>
@@ -548,5 +600,17 @@
       });
     </script>
     <script src="../assets/js/form-submission.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper-container", {
+        loop: true,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="../assets/js/language.js"></script>
   </body>
 </html>
