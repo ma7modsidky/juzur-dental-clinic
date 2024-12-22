@@ -34,9 +34,48 @@
         min-width: 100%;
         transition: transform 0.5s ease-in-out;
       }
-      .swiper-slide {
-        width: 400px !important;
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
       }
+
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-center {
+        margin-left: auto;
+        margin-right: auto;
+        height: auto;
+        max-height: 80vh;
+        width: auto;
+      }
+
+      @media (max-width: 640px) {
+        .image-center {
+          max-height: 70vh;
+        }
+      }
+
+      @media (min-width: 641px) {
+        .image-center {
+          max-height: 80vh;
+        }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: #ccab60; /* Change this to your desired color */
+      }
+      .swiper-pagination-bullet {
+        background: #ccab60; /* Change this to your desired color */
+      }
+      .swiper-pagination-bullet-active {
+        background: #ccab60;
+      } /* Change this to your desired active color */
     </style>
   </head>
   <body class="bg-gray-100">
@@ -54,18 +93,32 @@
         />
         <!-- </div> -->
         <nav class="hidden md:flex space-x-4">
-          <a href="#hero" class="text-oslo-gray hover:text-sundance" data-translation="home">Home</a>
-          <a href="#services" class="text-oslo-gray hover:text-sundance"
-          data-translation="services"  >Services</a
+          <a
+            href="#hero"
+            class="text-oslo-gray hover:text-sundance"
+            data-translation="home"
+            >Home</a
           >
-          <a href="#team" class="text-oslo-gray hover:text-sundance"
-          data-translation="team"  >Our team</a
+          <a
+            href="#services"
+            class="text-oslo-gray hover:text-sundance"
+            data-translation="services"
+            >Services</a
           >
-          <a href="#contact" class="text-oslo-gray hover:text-sundance"
-          data-translation="contact"  >Contact</a
+          <a
+            href="#team"
+            class="text-oslo-gray hover:text-sundance"
+            data-translation="team"
+            >Our team</a
+          >
+          <a
+            href="#contact"
+            class="text-oslo-gray hover:text-sundance"
+            data-translation="contact"
+            >Contact</a
           >
 
-          <select id="language-selector">
+          <select class="language-selector">
             <option value="en">English</option>
             <option value="ar">Arabic</option>
           </select>
@@ -117,23 +170,31 @@
           <a
             href="#hero"
             class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
+            data-translation="home"
             >Home</a
           >
           <a
             href="#services"
             class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
+            data-translation="services"
             >Services</a
           >
           <a
             href="#team"
             class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
+            data-translation="team"
             >Our team</a
           >
           <a
             href="#contact"
             class="block text-oslo-gray hover:text-sundance mb-4 menu-item text-xl"
+            data-translation="contact"
             >Contact us</a
           >
+          <select class="language-selector">
+            <option value="en">English</option>
+            <option value="ar">Arabic</option>
+          </select>
         </div>
         <div class="p-4">
           <!-- social icons -->
@@ -226,7 +287,11 @@
     <section id="hero" class="bg-outer-space text-white py-20 mt-20">
       <div class="container mx-auto px-4 text-center">
         <h1 class="text-4xl font-bold mb-4">
-          <span data-translation="welcome to">Welcome to</span>&nbsp;<span class="text-sundance" data-translation="juzur">JUZUR</span>
+          <span data-translation="welcome to">Welcome to</span>&nbsp;<span
+            class="text-sundance"
+            data-translation="juzur"
+            >JUZUR</span
+          >
         </h1>
         <p class="mb-8" data-translation="intro">
           At Juzur dental clinics, our highly specialised team is dedicated to
@@ -247,7 +312,9 @@
     <!-- Our Services Section -->
     <section id="services" class="py-20">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-8" data-translation="services">Our Services</h2>
+        <h2 class="text-3xl font-bold mb-8" data-translation="services">
+          Our Services
+        </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="bg-white p-6 rounded-lg shadow">
             <div class="flex items-center justify-center m-2">
@@ -257,7 +324,9 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4" data-translation="veneers">Veneers</h3>
+            <h3 class="text-xl font-semibold mb-4" data-translation="veneers">
+              Veneers
+            </h3>
             <p class="text-gray-600" data-translation="veneers-intro">
               veneer installation service to beautify worn and broken teeth and
               get rid of gaps and pigmentation in a quick time, with
@@ -272,7 +341,10 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4" data-translation="dental-crown">
+            <h3
+              class="text-xl font-semibold mb-4"
+              data-translation="dental-crown"
+            >
               Dental crown installation
             </h3>
             <p class="text-gray-600" data-translation="dental-crown-intro">
@@ -290,7 +362,12 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4" data-translation="dental-implants">Dental implants</h3>
+            <h3
+              class="text-xl font-semibold mb-4"
+              data-translation="dental-implants"
+            >
+              Dental implants
+            </h3>
             <p class="text-gray-600" data-translation="dental-implants-intro">
               Replacing missing teeth resulting from fractures and decay to
               maintain gum health through dental implants using advanced
@@ -306,7 +383,12 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4" data-translation="teeth-whitening">Teeth whitening</h3>
+            <h3
+              class="text-xl font-semibold mb-4"
+              data-translation="teeth-whitening"
+            >
+              Teeth whitening
+            </h3>
             <p class="text-gray-600" data-translation="teeth-whitening-intro">
               By removing pigmentation, returning the teeth to their natural
               color, and unifying the color for a new, attractive smile.
@@ -320,7 +402,12 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4" data-translation="root-canal">Root canal therapy</h3>
+            <h3
+              class="text-xl font-semibold mb-4"
+              data-translation="root-canal"
+            >
+              Root canal therapy
+            </h3>
             <p class="text-gray-600" data-translation="root-canal-intro">
               a dental procedure to remove inflamed or infected pulp on the
               inside of the tooth which is then carefully cleaned and
@@ -335,7 +422,12 @@
                 class="h-10 w-auto"
               />
             </div>
-            <h3 class="text-xl font-semibold mb-4" data-translation="tooth-extraction">Tooth extraction</h3>
+            <h3
+              class="text-xl font-semibold mb-4"
+              data-translation="tooth-extraction"
+            >
+              Tooth extraction
+            </h3>
             <p class="text-gray-600" data-translation="tooth-extraction-intro">
               a dental procedure during which your tooth is completely removed
               from its socket. Sometimes, people refer to this as “pulling" a
@@ -348,27 +440,41 @@
 
     <!-- Our work -->
     <section class="py-12">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 relative">
         <h2 class="text-3xl font-bold text-center mb-8">Our Work</h2>
         <div class="swiper-container">
           <div class="swiper-wrapper">
+            <!-- <div class="swiper-slide">
+               <img src="your-image-url.jpg" class="image-center" />
+            </div> -->
             <div class="swiper-slide">
-              <img src="../assets/work/1.jpg" alt="Before" class="w-full  h-auto" />
-              
+              <img
+                src="../assets/work/1.jpg"
+                alt="Before"
+                class="image-center"
+              />
             </div>
             <div class="swiper-slide">
-              <img src="../assets/work/2.jpg" alt="Before" class="w-full h-auto" />
+              <img
+                src="../assets/work/2.jpg"
+                alt="Before"
+                class="image-center"
+              />
             </div>
             <div class="swiper-slide">
-              <img src="../assets/work/3.jpg" alt="Before" class="w-full h-auto" />
+              <img
+                src="../assets/work/3.jpg"
+                alt="Before"
+                class="image-center"
+              />
             </div>
             <!-- Add more slides as needed -->
           </div>
           <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
+          <div class="swiper-pagination absolute text-sundance"></div>
           <!-- Add Navigation -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next text-sundance"></div>
+          <div class="swiper-button-prev text-sundance"></div>
         </div>
       </div>
     </section>
@@ -603,6 +709,8 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        centeredSlides: true,
         loop: true,
         pagination: { el: ".swiper-pagination", clickable: true },
         navigation: {

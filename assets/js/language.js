@@ -47,10 +47,16 @@ const translations = {
     }
 }
 
-document.getElementById('language-selector').addEventListener('change', function(){
-    const lang = this.value;
-    document.querySelectorAll('[data-translation]').forEach(element => {
-        const key = element.getAttribute('data-translation')
-        element.textContent = translations[lang][key];
+const languageSelectors = document.querySelectorAll('.language-selector')
+languageSelectors.forEach( selector => {
+    selector.addEventListener('change', function(){
+        const lang = selector.value;
+        languageSelectors.forEach(selector=>{
+            selector.value = lang
+        });
+        document.querySelectorAll('[data-translation]').forEach(element => {
+            const key = element.getAttribute('data-translation')
+            element.textContent = translations[lang][key];
+        });
     });
-});
+})
