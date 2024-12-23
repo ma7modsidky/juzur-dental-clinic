@@ -20,6 +20,13 @@ const translations = {
         'root-canal-intro': 'A dental procedure to remove inflamed or infected pulp on the inside of the tooth which is then carefully cleaned and disinfected.',
         'tooth-extraction': 'Tooth Extraction',
         'tooth-extraction-intro': 'A dental procedure during which your tooth is completely removed from its socket. Sometimes, people refer to this as “pulling" a tooth.',
+        'address-details': '154 Al Nozha Street, Saint Fatima Square, Cairo, Egypt',
+        'phone': 'Phone',
+        'email': 'Email',
+        'address': 'Address',
+        'contact-details': 'Contact Details',
+        'send-message': 'Send Message',
+
 
     },
 
@@ -44,6 +51,12 @@ const translations = {
         'root-canal-intro': 'إجراء طب الأسنان لإزالة اللب الملتهب أو المصاب من داخل السن، ثم يتم تنظيفه وتطهيره بعناية.',
         'tooth-extraction': 'خلع الأسنان',
         'tooth-extraction-intro': 'عملية طب الأسنان التي يتم خلالها إزالة السن بالكامل من تجويفه. في بعض الأحيان، يشير الناس إلى هذه العملية باسم "سحب" السن.',
+        'address-details': '١٥٤ شارع النزهة، ميدان سانت فاطيما، القاهرة، مصر',
+        'phone': 'الهاتف',
+        'email': 'ايميل',
+        'address': 'العنوان',
+        'contact-details': 'معلومات الاتصال',
+        'send-message': 'ارسال',
     }
 }
 
